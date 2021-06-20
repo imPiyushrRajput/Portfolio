@@ -1,0 +1,56 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { ThemeProvider } from 'styled-components';
+import { Head, Nav, Social, Email, Footer } from '@components';
+import { GlobalStyle, theme } from '@styles';
+
+// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
+}
+
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 6rem 0;
+`;
+
+const Layout = ({ children, location }) => {
+  const isHome = location.pathname === '/';
+
+  return (
+    <>
+      <Head />
+
+      <div id="root">
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+
+          <a className="skip-to-content" href="#content">
+            Skip to Content
+          </a>
+
+          <StyledContent>
+            <Nav isHome={isHome} />
+            <Social isHome={isHome} />
+            <Email isHome={isHome} />
+
+            <div id="content">
+              {children}
+              <Footer />
+            </div>
+          </StyledContent>
+        </ThemeProvider>
+      </div>
+    </>
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+};
+
+export default Layout;

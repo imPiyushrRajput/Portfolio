@@ -1,5 +1,5 @@
 ---
-date: 'Jan 2020 – Apr 2021'
+date: '2021-04-01'
 title: 'GoSafe - Emergency Safety Services in Real-time'
 github: 'https://github.com/GoSafe-App'
 external: 'https://gosafe.netlify.app/'

@@ -1,5 +1,5 @@
 ---
-date: 'Apr 2021 – May 2021'
+date: '2021-05-01'
 title: 'Jalgaon Cohelp | COVID19 Resources'
 github: 'https://github.com/jalgaon-cohelp'
 external: 'https://jalgaoncohelp.in/'

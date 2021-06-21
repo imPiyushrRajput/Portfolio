@@ -2,7 +2,7 @@
 date: '2020'
 title: 'Personal Portfolio Website'
 github: 'https://github.com/imPiyushrRajput/Portfolio'
-external: 'https://piyushrajput.netlify.app'
+external: 'https://rajputpiyush.com'
 tech:
   - React Js
   - GraphQL
